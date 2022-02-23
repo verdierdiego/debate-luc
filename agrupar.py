@@ -76,6 +76,6 @@ archivo_cantidad.write('total'+','+str(len(tuits)))
 for attribute, value in horas.items():
   archivo_horas.write(attribute+'0,'+str(value)+'\n')
 for attribute, value in usuarios.items():
-  archivo_usuarios.write(attribute+'0,'+str(value)+'\n')
+  archivo_usuarios.write(attribute+','+str(value)+'\n')
 
 print('ok')
