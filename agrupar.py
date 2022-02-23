@@ -4,10 +4,12 @@ import collections
 archivo_global = open('global.csv', 'w')
 archivo_hashtags = open('hashtags.csv', 'w')
 archivo_menciones = open('menciones.csv', 'w')
+archivo_cantidad = open('menciones.csv', 'w')
 
 archivo_global.write('identificador,dia,hora,user,texto'+'\n')
 archivo_hashtags.write('hashtag,cantidad'+'\n')
 archivo_menciones.write('usuario,cantidad'+'\n')
+archivo_cantidad.write('tuits,total'+'\n')
 
 hashtags = {}
 primera = True
@@ -49,5 +51,7 @@ with open('./../global.csv') as input_file:
       identificador = row[0]
       if (identificador not in tuits):
         archivo_global.write((',').join(row)+'\n')
+
+archivo_cantidad.write('total'+','+len(tuits))
 
 print('ok')
