@@ -5,11 +5,13 @@ archivo_global = open('global.csv', 'w')
 archivo_hashtags = open('hashtags.csv', 'w')
 archivo_menciones = open('menciones.csv', 'w')
 archivo_cantidad = open('total.csv', 'w')
+archivo_horas = open('horas.csv')
 
 archivo_global.write('identificador,dia,hora,user,texto'+'\n')
 archivo_hashtags.write('hashtag,cantidad'+'\n')
 archivo_menciones.write('usuario,cantidad'+'\n')
 archivo_cantidad.write('tuits,total'+'\n')
+archivo_horas.write('hora,cantidad'+'\n')
 
 hashtags = {}
 primera = True
@@ -63,5 +65,7 @@ with open('./../global.csv') as input_file:
         tuits.append(identificador)
 
 archivo_cantidad.write('total'+','+str(len(tuits)))
+for attribute, value in horas.items():
+  archivo_horas.write(attribute+','+str(value)+'\n')
 
 print('ok')
