@@ -4,7 +4,7 @@ import collections
 archivo_global = open('global.csv', 'w')
 archivo_hashtags = open('hashtags.csv', 'w')
 archivo_menciones = open('menciones.csv', 'w')
-archivo_cantidad = open('menciones.csv', 'w')
+archivo_cantidad = open('total.csv', 'w')
 
 archivo_global.write('identificador,dia,hora,user,texto'+'\n')
 archivo_hashtags.write('hashtag,cantidad'+'\n')
