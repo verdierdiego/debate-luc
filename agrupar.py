@@ -8,7 +8,6 @@ archivo_cantidad = open('total.csv', 'w')
 archivo_horas = open('horasRefinado.csv', 'w')
 archivo_usuarios = open('usuarios.csv', 'w')
 archivo_manini = open('manini.csv', 'w')
-archivo_andrade = open('andrade.csv', 'w')
 
 archivo_global.write('identificador,dia,hora,user,texto'+'\n')
 archivo_hashtags.write('hashtag,cantidad'+'\n')
@@ -16,8 +15,7 @@ archivo_menciones.write('usuario,cantidad'+'\n')
 archivo_cantidad.write('tuits,total'+'\n')
 archivo_horas.write('hora,cantidad'+'\n')
 archivo_usuarios.write('usuario,cantidad'+'\n')
-archivo_manini.write('total,cantidad'+'\n')
-archivo_andrade.write('total,cantidad'+'\n')
+archivo_manini.write('candidato,cantidad'+'\n')
 
 hashtags = {}
 primera = True
