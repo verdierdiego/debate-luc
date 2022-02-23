@@ -54,13 +54,13 @@ with open('./../global.csv') as input_file:
       primera = False
     else:
       identificador = row[0]
-      hora = row[2]
-      hora = hora[0:4]
-      try:
-        horas[hora] += 1
-      except:
-        horas[hora] = 0
       if (identificador not in tuits):
+        hora = row[2]
+        hora = hora[0:4]
+        try:
+          horas[hora] += 1
+        except:
+          horas[hora] = 0
         archivo_global.write((',').join(row)+'\n')
         tuits.append(identificador)
 
