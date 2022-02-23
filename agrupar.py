@@ -28,6 +28,7 @@ for attribute, value in hashtags.items():
   archivo_hashtags.write(attribute+','+str(value)+'\n')
 
 hashtags = {}
+primera = True
 with open('./../menciones.csv') as input_file:
   for row in csv.reader(input_file, delimiter=','):
     if primera:
