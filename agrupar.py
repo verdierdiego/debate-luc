@@ -49,3 +49,5 @@ with open('./../global.csv') as input_file:
       identificador = row[0]
       if (identificador not in tuits):
         archivo_global.write((',').join(row)+'\n')
+
+print('ok')
