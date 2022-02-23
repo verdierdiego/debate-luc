@@ -26,7 +26,7 @@ with open('./../hashtags.csv') as input_file:
       try:
         hashtags[hashtag] += 1
       except:
-        hashtags[hashtag] = 0
+        hashtags[hashtag] = 1
 
 for attribute, value in hashtags.items():
   archivo_hashtags.write(attribute+','+str(value)+'\n')
@@ -42,7 +42,7 @@ with open('./../menciones.csv') as input_file:
       try:
         hashtags[hashtag] += 1
       except:
-        hashtags[hashtag] = 0
+        hashtags[hashtag] = 1
 
 for attribute, value in hashtags.items():
   archivo_menciones.write(attribute+','+str(value)+'\n')
@@ -63,12 +63,12 @@ with open('./../global.csv') as input_file:
         try:
           horas[hora] += 1
         except:
-          horas[hora] = 0
+          horas[hora] = 1
         user = row[3]
         try:
           usuarios[user] += 1
         except:
-          usuarios[user] = 0
+          usuarios[user] = 1
         archivo_global.write((',').join(row)+'\n')
         tuits.append(identificador)
 
