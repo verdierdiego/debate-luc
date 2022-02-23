@@ -55,7 +55,7 @@ with open('./../global.csv') as input_file:
     else:
       identificador = row[0]
       hora = row[2]
-      hora = hora[0:5]
+      hora = hora[0:4]
       try:
         horas[hora] += 1
       except:
@@ -66,6 +66,6 @@ with open('./../global.csv') as input_file:
 
 archivo_cantidad.write('total'+','+str(len(tuits)))
 for attribute, value in horas.items():
-  archivo_horas.write(attribute+','+str(value)+'\n')
+  archivo_horas.write(attribute+'0,'+str(value)+'\n')
 
 print('ok')
