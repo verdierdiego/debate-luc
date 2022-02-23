@@ -45,7 +45,7 @@ with open('./../menciones.csv') as input_file:
         hashtags[hashtag] = 1
 
 for attribute, value in hashtags.items():
-  archivo_menciones.write(attribute+','+str(value)+'\n')
+  archivo_menciones.write('@'+attribute+','+str(value)+'\n')
 
 
 tuits = []
@@ -76,6 +76,6 @@ archivo_cantidad.write('total'+','+str(len(tuits)))
 for attribute, value in horas.items():
   archivo_horas.write(attribute+'0,'+str(value)+'\n')
 for attribute, value in usuarios.items():
-  archivo_usuarios.write(attribute+','+str(value)+'\n')
+  archivo_usuarios.write('@'+attribute+','+str(value)+'\n')
 
 print('ok')
