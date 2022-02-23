@@ -52,6 +52,6 @@ with open('./../global.csv') as input_file:
       if (identificador not in tuits):
         archivo_global.write((',').join(row)+'\n')
 
-archivo_cantidad.write('total'+','+len(tuits))
+archivo_cantidad.write('total'+','+str(len(tuits)))
 
 print('ok')
