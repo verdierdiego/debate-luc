@@ -7,7 +7,7 @@ archivo_menciones = open('menciones.csv', 'w')
 archivo_cantidad = open('total.csv', 'w')
 archivo_horas = open('horasRefinado.csv', 'w')
 archivo_usuarios = open('usuarios.csv', 'w')
-archivo_manini = open('manini.csv', 'w')
+archivo_candidato = open('candidato.csv', 'w')
 
 archivo_global.write('identificador,dia,hora,user,texto'+'\n')
 archivo_hashtags.write('hashtag,cantidad'+'\n')
@@ -15,7 +15,7 @@ archivo_menciones.write('usuario,cantidad'+'\n')
 archivo_cantidad.write('tuits,total'+'\n')
 archivo_horas.write('hora,cantidad'+'\n')
 archivo_usuarios.write('usuario,cantidad'+'\n')
-archivo_manini.write('candidato,cantidad'+'\n')
+archivo_candidato.write('candidato,cantidad'+'\n')
 
 hashtags = {}
 primera = True
@@ -91,7 +91,7 @@ with open('./../manini.csv') as input_file:
       identificador = row[0]
       if (identificador not in manini):
         manini.append(identificador)
-archivo_manini.write('manini'+','+str(len(manini)))
+archivo_candidato.write('manini'+','+str(len(manini))+'\n')
 
 andrade = []
 primera = True
@@ -103,6 +103,6 @@ with open('./../andrade.csv') as input_file:
       identificador = row[0]
       if (identificador not in andrade):
         andrade.append(identificador)
-archivo_manini.write('andrade'+','+str(len(andrade)))
+archivo_candidato.write('andrade'+','+str(len(andrade)))
 
 print('ok')
