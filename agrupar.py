@@ -1,9 +1,9 @@
 import csv
 import collections
 
-archivo_global = open('./archivos/global.csv', 'w')
-archivo_hashtags = open('./archivos/hashtags.csv', 'w')
-archivo_menciones = open('./archivos/menciones.csv', 'w')
+archivo_global = open('global.csv', 'w')
+archivo_hashtags = open('hashtags.csv', 'w')
+archivo_menciones = open('menciones.csv', 'w')
 
 archivo_global.write('identificador,dia,hora,user,texto'+'\n')
 archivo_hashtags.write('hashtag,cantidad'+'\n')
@@ -11,7 +11,7 @@ archivo_menciones.write('usuario,cantidad'+'\n')
 
 hashtags = {}
 primera = True
-with open('hashtags.csv') as input_file:
+with open('./../hashtags.csv') as input_file:
   for row in csv.reader(input_file, delimiter=','):
     if primera:
       primera = False
@@ -25,7 +25,7 @@ with open('hashtags.csv') as input_file:
 for attribute, value in hashtags.items():
   archivo_hashtags.write(attribute+','+str(value)+'\n')
 
-with open('menciones.csv') as input_file:
+with open('./../menciones.csv') as input_file:
   for row in csv.reader(input_file, delimiter=','):
     if primera:
       primera = False
@@ -41,7 +41,7 @@ for attribute, value in hashtags.items():
 
 
 tuits = []
-with open('global.csv') as input_file:
+with open('./../global.csv') as input_file:
   for row in csv.reader(input_file, delimiter=','):
     if primera:
       primera = False
