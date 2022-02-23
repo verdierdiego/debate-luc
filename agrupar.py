@@ -93,7 +93,7 @@ with open('./../manini.csv') as input_file:
       identificador = row[0]
       if (identificador not in manini):
         manini.append(identificador)
-archivo_manini.write('total'+','+str(len(manini)))
+archivo_manini.write('manini'+','+str(len(manini)))
 
 andrade = []
 primera = True
@@ -105,6 +105,6 @@ with open('./../andrade.csv') as input_file:
       identificador = row[0]
       if (identificador not in andrade):
         andrade.append(identificador)
-archivo_andrade.write('total'+','+str(len(andrade)))
+archivo_manini.write('andrade'+','+str(len(andrade)))
 
 print('ok')
