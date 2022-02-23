@@ -16,7 +16,6 @@ archivo_menciones.write('usuario,cantidad'+'\n')
 archivo_cantidad.write('tuits,total'+'\n')
 archivo_horas.write('hora,cantidad'+'\n')
 archivo_usuarios.write('usuario,cantidad'+'\n')
-
 archivo_manini.write('total,cantidad'+'\n')
 archivo_andrade.write('total,cantidad'+'\n')
 
@@ -106,6 +105,6 @@ with open('./../andrade.csv') as input_file:
       identificador = row[0]
       if (identificador not in andrade):
         andrade.append(identificador)
-archivo_andrade.write('total'+','+str(len(manini)))
+archivo_andrade.write('total'+','+str(len(andrade)))
 
 print('ok')
